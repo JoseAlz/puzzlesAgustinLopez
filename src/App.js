@@ -10,12 +10,12 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
-          className="E-commerce Entrega 1 Agustin Lopez"
+          className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Puzzles Bar - Agustin Lopez
         </a>
       </header>
     </div>
