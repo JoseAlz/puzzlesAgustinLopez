@@ -1,0 +1,21 @@
+.logoNav {
+    width: 220px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    
+
+}
+
+.btn {
+    margin: 2rem 1rem !important;
+    border-color: black !important;
+}
+.iconoIG{
+    color: blueviolet;
+    height: 30px !important;
+    width: 30px;
+    margin: 2rem 1 rem;
+}

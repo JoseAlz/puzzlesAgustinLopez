@@ -1,25 +1,26 @@
 
 import './App.css';
 
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        
+      <div className="App-header">
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Disculpe, en este momento estamos en mantenimiento! <br />Puede visitar la antigua web haciendo click en el botón.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <a href='https://lopeza93.github.io/puzzlesbar/' target="_blank">
+          <button className='btn btn-primary' > Ir al enlace externo </button>
+        </a>
+        <p
         >
           Puzzles Bar - Agustin Lopez
-        </a>
-      </header>
+        </p>
+      </div>
     </div>
   );
 }
-
 export default App;
+
+
+
