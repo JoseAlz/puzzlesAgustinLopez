@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import "bootstrap/dist/css/bootstrap.min.css";
-import NavBar from "./components/Navbar"
+
+import NavBar from "./components/NavBar/Navbar";
+import BoxItem from "./components/productos/ItemListContainer"
+
 
 
 
@@ -11,7 +12,8 @@ import NavBar from "./components/Navbar"
 ReactDOM.render(
   <React.StrictMode>
     <NavBar/>
-    <App />
+    <BoxItem/>
+    
     
   </React.StrictMode>,
   document.getElementById('root')

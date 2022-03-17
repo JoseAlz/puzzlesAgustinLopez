@@ -1,7 +1,8 @@
-import Logo from "../Img/logo.png";
+import Logo from "../NavBar/Img/logo.png";
 import {FaInstagram } from "react-icons/fa"
 import Button from '@mui/material/Button';
-import "../components/styleNavBar.css";
+import "../NavBar/styleNavBar.css";
+import CartWidget from "../CartWidget/CartWidget";
 
 function NavBar() {
     return (
@@ -19,8 +20,9 @@ function NavBar() {
                    
                     <div className="iconosNav">
                         <Button > <FaInstagram className="iconoIG" /> </Button>
-
+                        <CartWidget/>
                     </div>
+
 
                 </nav>
 
