@@ -1,0 +1,14 @@
+.botones {  
+    width: 25%;
+    margin: auto 1rem !important;
+    border-radius: 5px;
+    color: black;
+    border: 1px solid gray !important;
+    box-shadow: 0 3px 3px ;
+
+
+}
+.botonAgregarCarro{
+    background-color: black !important;
+    color: white !important;
+}
