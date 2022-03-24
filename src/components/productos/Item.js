@@ -1,6 +1,5 @@
 import   "../productos/item.css"
 import ItemCount from "../ItemCount/ItemCount";
-import Button from '@mui/material/Button';
 
 
 function Item ({nombre, precio, tamaño, img, stockItem}) {
