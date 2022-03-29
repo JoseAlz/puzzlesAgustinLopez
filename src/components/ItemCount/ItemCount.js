@@ -1,19 +1,19 @@
 import { useState } from 'react';
 import "./ItemCount.css";
 import Button from '@mui/material/Button';
-
+import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 const ItemCount = ({stock}) => {
     
     
     const initial= 0;
-    const [cantidad, useContador] = useState(0);
+    const [cantidad, setContador] = useState(0);
     
     
     const ClickSumar = () => {
-         useContador (cantidad +1);
+         setContador (cantidad +1);
         };
     const ClickRestar= () => {
-        useContador (cantidad -1);
+        setContador (cantidad -1);
     };   
 
 
@@ -21,7 +21,7 @@ const ItemCount = ({stock}) => {
         <Button className="botones" onClick={ClickSumar} disabled={cantidad === stock ? true : false} > + </Button>
         <Button className="botones" onClick={ClickRestar} disabled={cantidad === initial ? true : false} >-</Button>
         <p> Cantidad: {cantidad}</p>
-        <Button className="botonAgregarCarro" defined>Sumar al carro</Button>
+        <Button className="botonAgregarCarro" defined >Sumar al carro</Button>
 
         </div>
     )

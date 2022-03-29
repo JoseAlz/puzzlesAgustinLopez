@@ -1,0 +1,15 @@
+
+.itemDetail{
+    width: 100%;
+    display: flex;
+    flex: 1;
+    background-color: aqua;
+    border-radius: 5px;
+}
+.imgItemDetail{
+    width: 200px;
+}
+.textItemDetail {
+    text-align: center;
+    margin-left: 2rem;
+}

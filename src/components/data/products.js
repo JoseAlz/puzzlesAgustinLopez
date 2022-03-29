@@ -14,6 +14,7 @@ const productos = [
         tamaño :710,
         stock:14,
         imagen: ImagenCerveza,
+        detalle: "Cerveza rubia marca Corona"
     },
     {
         id:2,
@@ -22,6 +23,7 @@ const productos = [
         tamaño :710,
         stock:5,
         imagen: ImagenGin,
+        detalle: "Gin Tanqueray, ideal para refrescar tu día"
     },
     {
         id:3,
@@ -29,7 +31,8 @@ const productos = [
         precio:1250,
         tamaño :710,
         stock:15,
-        imagen: ImagenFernet
+        imagen: ImagenFernet,
+        detalle: "El mejor amigo de la coca cola"
     },
     {
         id:4,
@@ -37,7 +40,8 @@ const productos = [
         precio:450,
         tamaño :710,
         stock:10,
-        imagen: ImagenVino
+        imagen: ImagenVino,
+        detalle: "Vino tinto"
     },
     {
         id:5,
@@ -45,7 +49,8 @@ const productos = [
         precio:650,
         tamaño :710,
         stock:15,
-        imagen: ImagenCampari
+        imagen: ImagenCampari,
+        detalle: "Bebida alcoholica para mezclar con naranja"
     },
     {
         id:6,
@@ -53,7 +58,8 @@ const productos = [
         precio:1250,
         tamaño :710,
         stock:11,
-        imagen: ImagenWhiskey
+        imagen: ImagenWhiskey,
+        detalle: "Mas fuerte que la cachetada de Will"
     },
     
 
