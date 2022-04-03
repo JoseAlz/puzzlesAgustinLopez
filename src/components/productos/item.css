@@ -4,7 +4,7 @@
     border: 1px solid gray;
     margin: 3rem;
     border-radius: 5px;
-    box-shadow: 0 5px 5px 0 rgba(83, 83, 83, 0.507);
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.459);
     background-color: white;
 
 
@@ -14,9 +14,23 @@
     flex-flow: row wrap;
     text-align: center;
     justify-content: center;
-    background-color: rgb(33, 36, 66);
+    
 }
 .imgItem {
     width: 200px;
 
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.btnDetalle {
+    border: 1px solid black !important;
+    margin: 1rem !important;
+    background-color: white;
+    color: black !important
+}
+.btnDetalle:hover{
+    background-color: black !important;
+    color: white !important;
 }

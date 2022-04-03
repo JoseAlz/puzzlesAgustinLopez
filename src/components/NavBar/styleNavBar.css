@@ -8,14 +8,19 @@ nav {
     justify-content: space-between;
     border-radius: 5px;
     border: 2px solid darkgray;
-    
+    background-color: white;
     
 
 }
 
 .btn {
     margin: 2rem 1rem !important;
-    border-color: black !important;
+    border-color: rgb(16, 16, 43) !important;
+    color: black !important;
+}
+.btn:hover{
+    background-color: rgb(107, 152, 167) !important;
+    color: white !important;
 }
 .iconoIG{
     color: blueviolet;

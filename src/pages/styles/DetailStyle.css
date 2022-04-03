@@ -1,0 +1,28 @@
+.imgDetail img {
+    width: 250px;
+    
+}
+.textoDetail {
+    margin: 2rem;
+}
+.imgDetail{
+    text-align: center;
+    margin:2rem
+
+}
+.btnComprar{
+    border: 1px solid black !important;
+    width: 100% !important;
+    color: black !important;
+
+}
+.btnComprar:hover{
+    background-color: black!important;
+    color:white !important;
+    
+}
+.boxDetail{
+    background-color: white ;
+    margin-top: 2rem;
+    border-radius: 15px;
+}

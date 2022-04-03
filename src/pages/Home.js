@@ -1,17 +1,13 @@
 import ItemListContainer from "../components/productos/ItemListContainer"
-import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer"
+
 
 
 const HomePage = () => {
     return (
         <div>
+            <h1>Productos</h1>
             <ItemListContainer />
-            <ItemDetailContainer
-                item={5}
-            />
-            <ItemDetailContainer
-                item={2}
-            />
+            
 
         </div>
 

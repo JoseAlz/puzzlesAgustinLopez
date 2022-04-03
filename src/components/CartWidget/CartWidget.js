@@ -1,5 +1,4 @@
 import {FaShoppingCart} from "react-icons/fa";
-
 import Button from '@mui/material/Button';
 function CartWidget () {
     return (
