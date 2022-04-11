@@ -10,10 +10,11 @@
     margin:2rem
 
 }
-.btnComprar{
+.btnAgregarCarro{
     border: 1px solid black !important;
-    width: 100% !important;
+    width: 30% !important;
     color: black !important;
+    background-color: white !important;
 
 }
 .btnComprar:hover{

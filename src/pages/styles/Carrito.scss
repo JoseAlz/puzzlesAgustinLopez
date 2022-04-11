@@ -1,0 +1,48 @@
+.itemBox{
+    display: flex !important;
+    justify-content: space-between !important;
+    border-bottom: 1px solid black;
+    background-color: white;
+    img{
+        width: 250px;
+    }
+    p{
+        align-self: center;
+        font-size: 1.2rem;
+    }
+    .btnDeleteItem{
+        color:black;
+    }
+
+}
+.finBox{
+    display: flex !important;
+    justify-content: space-evenly !important;
+    margin: 2rem;
+    h4{
+        color: white
+    }
+    .btnFinCompra{
+        background-color: white;
+        color:black;
+        &:hover{
+            background-color: black;
+            color: white;
+        }
+    }
+}
+.cartVacio{
+    text-align: center;
+    p{
+        color: white;
+        text-align: center;
+    }
+    .btnVolver{
+        background-color: white;
+        color: black!important;
+        &:hover{
+            background-color: black;
+            color:white !important
+        }
+    }
+}

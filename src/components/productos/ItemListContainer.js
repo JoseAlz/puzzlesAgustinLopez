@@ -3,22 +3,29 @@ import { useEffect, useState } from "react";
 import Item from "./Item"
 import "../productos/item.css"
 import { Link, useParams } from "react-router-dom"
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
 
-const ItemListContainer = () => {
+const ItemListContainer = ({children}) => {
     const { category } = useParams();
     const [products, setProducts] = useState([])
+    const [loading, setLoading] = useState(true)
 
     const getProducts = () => {
         return new Promise((resolve, reject) => {
-            return resolve(dataProducts)
+            return setTimeout( () => {
+                resolve(dataProducts)
+            }, 2000 )
         })
-    }
+        }
 
     useEffect(() => {
-        
+        setLoading(true)
         setProducts([])
+        
         return getProducts().then((productos) => {
+            setLoading(false);
             category ? filterProductByCategory(productos, category) : setProducts(productos)
             
             
@@ -42,10 +49,12 @@ const ItemListContainer = () => {
         
         <div className="boxItem">
             
-            {
-                products.length ? (
+            
+            { 
+                !loading ? (
                     products.map((producto) => {
                         const { id, nombre, precio, tamaño, imagen, stock, categoria } = producto;
+                        
                         if (category) {
                         return (
                             
@@ -88,7 +97,11 @@ const ItemListContainer = () => {
                     )
 
                 ) : (
-                    console.log("Espere, cargando productos...")
+                    
+                    
+                    <Box sx={{ display: 'flex' }}>
+                        <CircularProgress />
+                    </Box>
                 )
             }
 

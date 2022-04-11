@@ -3,20 +3,20 @@ import "../ItemDetailContainer/itemDetail.css"
 import {Container, Grid, Button} from "@mui/material"
 import ItemCount from "../ItemCount/ItemCount"
 import {Link} from "react-router-dom"
+import {useContext, useEffect} from "react";
 
 
-
-const ItemDetail = ({image, name, price, detail,stock}) => {
+const ItemDetail = ( {name, image, detail, price, stock, id,}) => {
+    
     
     const addProduct = (cant) => {
        
-         alert (`Has agregado ${cant} producto`)
-    
-        
+         alert (`Has agregado ${cant} producto`)  
         
     }
     
     
+
     return (
         <Container>
             <Grid container className="boxDetail">
@@ -32,7 +32,9 @@ const ItemDetail = ({image, name, price, detail,stock}) => {
                         <p> Descripción: {detail}</p>
                         <p> Precio: $ {price} </p>
                         <ItemCount stock={stock} addProduct={addProduct}/>
-                        <Link to={"/cart"}><Button  className="btnComprar" >COMPRAR</Button></Link>
+                        
+                            {/* <Button  className="btnComprar" onClick={addtoCart}  >COMPRAR</Button> */}
+                        
 
                     </div>
                 </Grid>

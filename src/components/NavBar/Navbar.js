@@ -23,8 +23,9 @@ function NavBar() {
                         </div>
                    
                     <div className="iconosNav">
-                        <Button > <FaInstagram className="iconoIG" /> </Button>
+                        
                         <CartWidget/>
+                        <Button > <FaInstagram className="iconoIG" /> </Button>
                     </div>
 
 

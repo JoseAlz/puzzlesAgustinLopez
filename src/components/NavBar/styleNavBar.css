@@ -26,12 +26,14 @@ nav {
     color: blueviolet;
     height: 30px !important;
     width: 30px;
-    margin: 2rem 1 rem;
+    margin: 2rem 1rem;
 }
 .iconoCart {
-    height: 30px ;
-    width: 30px;
-    margin: 2rem 1 rem;
+    color: black;
+    height: 35px !important;
+    width: 35px;
+    
+    
 }
 .iconosNav{
     display: flex;

@@ -6,7 +6,7 @@ import NavBar from "./components/NavBar/Navbar";
 import HomePage from "./pages/Home"
 import DetailPage from "./pages/Detail"
 import ContactoPage from "./pages/Contacto"
-
+import CartPage from "./pages/Carrito"
 import {CartProvider} from "./context/CartContext"
 
 
@@ -21,6 +21,7 @@ ReactDOM.render(
           <Route path="/:category/" element={<HomePage />} />
           <Route path="/:category/:id" element={<DetailPage />} />
           <Route path='/contacto' element={<ContactoPage />} />
+          <Route path='/cart' element={<CartPage />}/>
           <Route path="*" element={<ContactoPage />} />
 
         </Routes>

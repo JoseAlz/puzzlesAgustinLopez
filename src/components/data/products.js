@@ -31,7 +31,7 @@ const productos = [
     },
     {
         id:3,
-        nombre:"Fernet Branca",
+        nombre:"Fernet Branca ",
         precio:1250,
         tamaño :710,
         stock:15,
@@ -91,7 +91,7 @@ const productos = [
     },
     {
         id:9,
-        nombre:"Paso de los Toros - Agua Tonica",
+        nombre:"Agua Tonica",
         precio:350,
         tamaño :1000,
         stock:15,
