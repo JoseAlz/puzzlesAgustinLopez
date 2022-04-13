@@ -3,15 +3,21 @@ import "../ItemDetailContainer/itemDetail.css"
 import {Container, Grid, Button} from "@mui/material"
 import ItemCount from "../ItemCount/ItemCount"
 import {Link} from "react-router-dom"
-import {useContext, useEffect} from "react";
+import {useContext, useEffect, useState} from "react";
+import CartContext from "../../context/CartContext";
+import productos from "../data/products";
 
 
 const ItemDetail = ( {name, image, detail, price, stock, id,}) => {
     
+    const [ contador, setContador ] = useState(-1)
+
+    const {agregarProductoCarro} = useContext(CartContext)
     
     const addProduct = (cant) => {
-       
-         alert (`Has agregado ${cant} producto`)  
+        setContador(cant)
+        agregarProductoCarro({cantidad: cant})
+        
         
     }
     
@@ -31,9 +37,9 @@ const ItemDetail = ( {name, image, detail, price, stock, id,}) => {
                         <h4>Producto: {name}</h4>
                         <p> Descripción: {detail}</p>
                         <p> Precio: $ {price} </p>
-                        <ItemCount stock={stock} addProduct={addProduct}/>
+                        <ItemCount stock={stock}  addProduct={addProduct}/>
                         
-                            {/* <Button  className="btnComprar" onClick={addtoCart}  >COMPRAR</Button> */}
+                            
                         
 
                     </div>

@@ -17,7 +17,8 @@ const productos = [
         stock:14,
         imagen: ImagenCerveza,
         categoria: "alcoholica",
-        detalle: "Cerveza rubia marca Corona"
+        detalle: "Cerveza rubia marca Corona",
+        cantidad: 0,
     },
     {
         id:2,
@@ -27,7 +28,8 @@ const productos = [
         stock:5,
         imagen: ImagenGin,
         categoria: "alcoholica",
-        detalle: "Gin Tanqueray, ideal para refrescar tu día"
+        detalle: "Gin Tanqueray, ideal para refrescar tu día",
+        cantidad: 0,
     },
     {
         id:3,
@@ -37,7 +39,8 @@ const productos = [
         stock:15,
         imagen: ImagenFernet,
         categoria: "alcoholica",
-        detalle: "El mejor amigo de la coca cola"
+        detalle: "El mejor amigo de la coca cola",
+        cantidad: 0,
     },
     {
         id:4,
@@ -47,7 +50,8 @@ const productos = [
         stock:10,
         imagen: ImagenVino,
         categoria: "alcoholica",
-        detalle: "Vino tinto"
+        detalle: "Vino tinto",
+        cantidad: 0,
     },
     {
         id:5,
@@ -57,7 +61,8 @@ const productos = [
         stock:15,
         imagen: ImagenCampari,
         categoria: "alcoholica",
-        detalle: "Bebida alcoholica para mezclar con naranja"
+        detalle: "Bebida alcoholica para mezclar con naranja",
+        cantidad: 0,
     },
     {
         id:6,
@@ -67,7 +72,8 @@ const productos = [
         stock:11,
         imagen: ImagenWhiskey,
         categoria: "alcoholica",
-        detalle: "Mas fuerte que la cachetada de Will"
+        detalle: "Mas fuerte que la cachetada de Will",
+        cantidad: 0,
     },
     {
         id:7,
@@ -78,6 +84,7 @@ const productos = [
         imagen: ImagenAgua,
         categoria: "comunes",
         detalle: "Agua natural potable, traida de las montañas de Córdoba",
+        cantidad: 0,
     },
     {
         id:8,
@@ -88,6 +95,7 @@ const productos = [
         imagen: ImagenCocaCola,
         categoria: "comunes",
         detalle: "Gaseosa sabor a Cola, el mejor amigo de Fernet",
+        cantidad: 0,
     },
     {
         id:9,
@@ -98,6 +106,7 @@ const productos = [
         imagen: ImagenTonica,
         categoria: "comunes",
         detalle: "Acompañante perfecto para el Gin",
+        cantidad: 0,
     }
     
 

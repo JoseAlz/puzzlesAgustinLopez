@@ -20,11 +20,11 @@ const CartPage = () => {
                     <div>
                     {cartProducts.map((product) => {
                         return (
-                            <Container className="itemBox"><img src={product.imagen} />
+                            <Container className="itemBox" key={product.id}><img src={product.imagen} />
                                 <p>Producto: {product.nombre}</p>
                                 <p>Precio: $ {product.precio}</p>
-                                <p>Cantidad: 1</p>
-                                <Button ><DeleteIcon className="btnDeleteItem" onClick={() => eliminarProductoCarro(product)} /></Button>
+                                <p>Cantidad: {product.cantidad}</p>
+                                <Button onClick={() => eliminarProductoCarro(product)} ><DeleteIcon className="btnDeleteItem"  /></Button>
                             </Container>)
 
                     })}

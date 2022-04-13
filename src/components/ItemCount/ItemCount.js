@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import "./ItemCount.css";
 import Button from '@mui/material/Button';
+import CartContext from '../../context/CartContext';
 
 const ItemCount = ({stock, addProduct}) => {
     
+    const {cartProducts, agregarProductoCarro} = useContext(CartContext)
     
     const initial= 1;
     const [cantidad, setContador] = useState(1);
@@ -28,4 +30,5 @@ const ItemCount = ({stock, addProduct}) => {
     )
 
 }
+
 export default ItemCount;

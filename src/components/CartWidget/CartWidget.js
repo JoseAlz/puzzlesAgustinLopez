@@ -56,6 +56,7 @@ function CartWidget() {
                     <img src={cartProduct.imagen} />
                     <p>{cartProduct.nombre}</p>
                     <p> $ {cartProduct.precio}</p>
+                    <p>Cantidad: {cartProduct.cantidad}</p>
 
                     <Button onClick={() => eliminarProductoCarro(cartProduct)}><DeleteIcon /></Button>
                   </MenuItem>
