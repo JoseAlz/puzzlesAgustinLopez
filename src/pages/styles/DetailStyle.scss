@@ -1,0 +1,53 @@
+.imgDetail img {
+    
+    
+}
+
+.btnComprar:hover{
+    background-color: black!important;
+    color:white !important;
+    
+}
+.boxDetail{
+    background-color: white ;
+    margin-top: 2rem;
+    border-radius: 15px;
+}
+
+.detailItem{
+    background-color: white;
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 20px;
+    .textoDetail {
+        margin: auto;
+    }
+    .imgDetail{
+        text-align: center;
+        margin:2rem;
+        img{
+            width: 250px;
+        }
+    
+    }
+    .btnContadores {
+        margin: auto;
+        padding: 2rem;
+        p{
+            padding: 1rem;
+        }
+        color: black !important;
+    }
+    .btnAgregarCarro{
+        border: 1px solid black !important;
+        width: 50% !important;
+        color: black !important;
+        background-color: white !important;
+        
+        &:hover{
+            background-color: black !important;
+            color:white !important
+        }
+    
+    }
+}

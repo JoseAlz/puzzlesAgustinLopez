@@ -7,13 +7,15 @@ const CartProvider= ({children}) =>{
     const [cartProducts, setCartProducts] = useState([]);
     
 
-    const agregarProductoCarro = (product, cnt) => {
+    const agregarProductoCarro = (product, cantidad) => {
         let existente= cartProducts.find(cartProducts => cartProducts.id === product.id)
         
         if (!existente) {
-            
+            product.cantidad = product.cantidad + cantidad
             setCartProducts(cartProducts =>[...cartProducts, product])
-            cnt= product.cantidad ++
+            
+        } else {
+            product.cantidad = product.cantidad + cantidad
         }
         
     }
@@ -36,19 +38,13 @@ const CartProvider= ({children}) =>{
     const calcTotal= () => {
         let total = 0
         cartProducts.map((cartProduct)=> {
-            total = cartProduct.precio  + total
+            total = cartProduct.precio * cartProduct.cantidad + total
 
         })
         return total
     }
     
-    const clickSumar = (cantidad) => {
-        cartProducts.map((product)=>{
-            let sumaCantidad= product.cantidad+1
-            return sumaCantidad;
-        })
-    }
-
+   
 
 
 
@@ -59,7 +55,7 @@ const CartProvider= ({children}) =>{
         agregarProductoCarro,
         eliminarProductoCarro,
         calcTotal,
-        clickSumar
+       
         
     }
     
