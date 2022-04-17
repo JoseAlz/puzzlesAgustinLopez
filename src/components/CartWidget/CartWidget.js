@@ -53,7 +53,7 @@ function CartWidget() {
                 return (<div key={cartProduct.id}>
                   <MenuItem onClick={handleClose} className="itemCart">
 
-                    <img src={cartProduct.imagen} />
+                    <img src={`../${cartProduct.imagen}`} />
                     <p>{cartProduct.nombre}</p>
                     <p> $ {cartProduct.precio}</p>
                     <p>Cantidad: {cartProduct.cantidad}</p>

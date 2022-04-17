@@ -5,19 +5,26 @@ import "../productos/item.css"
 import { Link, useParams } from "react-router-dom"
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
-
+import db from "../../firebase"
+import { collection, getDocs } from "firebase/firestore";
 
 const ItemListContainer = ({children}) => {
     const { category } = useParams();
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
 
-    const getProducts = () => {
-        return new Promise((resolve, reject) => {
-            return setTimeout( () => {
-                resolve(dataProducts)
-            }, 2000 )
+    const getProducts = async () => {
+        
+        const itemCollection = collection(db, "bebidas")
+        const productsSnapshot = await getDocs(itemCollection)
+        const itemList =  productsSnapshot.docs.map((item) => {
+            const product = item.data()
+            product.id= item.id
+            return product
         })
+        
+        return itemList
+       
         }
 
     useEffect(() => {

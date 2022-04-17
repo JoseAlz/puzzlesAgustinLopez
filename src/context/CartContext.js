@@ -55,6 +55,7 @@ const CartProvider= ({children}) =>{
         agregarProductoCarro,
         eliminarProductoCarro,
         calcTotal,
+        setCartProducts,
        
         
     }

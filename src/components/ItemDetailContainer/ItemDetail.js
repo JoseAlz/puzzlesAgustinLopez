@@ -4,7 +4,7 @@ import "../ItemDetailContainer/itemDetail.css"
 
 const ItemDetail = (product) => {
 
-    const { name, image, detail, price, stock, id } = product
+    const { name, imagen, detail, price, stock, id } = product
     
 
 
@@ -14,7 +14,7 @@ const ItemDetail = (product) => {
                 <>
 
                     <div className="imgDetail">
-                        <img src={image} alt="imagenDetail" />
+                        <img src={`../${imagen}`} alt="imagenDetail" />
                     </div>
                 
                 
