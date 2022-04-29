@@ -4,7 +4,7 @@ import "../ItemDetailContainer/itemDetail.css"
 
 const ItemDetail = (product) => {
 
-    const { name, imagen, detail, price, stock, id } = product
+    const { name, imagen, detail, price, stock, id, size } = product
     
 
 
@@ -21,6 +21,7 @@ const ItemDetail = (product) => {
                     <div className="textoDetail">
                         <h4>Producto: {name}</h4>
                         <p> Descripción: {detail}</p>
+                        <p> Tamaño: {size} ml</p>
                         <p> Precio: $ {price} </p>
                         
                         

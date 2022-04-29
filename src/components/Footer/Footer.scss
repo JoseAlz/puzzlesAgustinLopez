@@ -1,0 +1,45 @@
+body{
+    position:relative;
+    padding-bottom: 15rem;
+    min-height: 100vh;
+}
+footer {
+    background-color: white;
+    margin-top: 2rem;
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    .boxFooter {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 2rem;
+        .logoFooter{
+            img {
+                width: 220px;
+            }
+            p{
+                text-align: center;
+            }
+        }
+        .navFooter{
+            ul {
+                list-style-type: none;
+            }
+        }
+        .iconos{
+            margin-top: 2rem;
+            a{
+                margin: 1rem;
+            }
+        }
+    }
+
+
+
+    .copyRight {
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+
+}

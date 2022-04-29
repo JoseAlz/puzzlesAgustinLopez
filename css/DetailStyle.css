@@ -1,0 +1,53 @@
+.btnComprar:hover {
+  background-color: black !important;
+  color: white !important;
+}
+
+.boxDetail {
+  background-color: white;
+  margin-top: 2rem;
+  border-radius: 15px;
+}
+
+.detailItem {
+  background-color: white;
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+.detailItem .textoDetail {
+  margin: auto;
+}
+
+.detailItem .imgDetail {
+  text-align: center;
+  margin: 2rem;
+}
+
+.detailItem .imgDetail img {
+  width: 250px;
+}
+
+.detailItem .btnContadores {
+  margin: auto;
+  padding: 2rem;
+  color: black !important;
+}
+
+.detailItem .btnContadores p {
+  padding: 1rem;
+}
+
+.detailItem .btnAgregarCarro {
+  border: 1px solid black !important;
+  width: 50% !important;
+  color: black !important;
+  background-color: white !important;
+}
+
+.detailItem .btnAgregarCarro:hover {
+  background-color: black !important;
+  color: white !important;
+}
+/*# sourceMappingURL=DetailStyle.css.map */

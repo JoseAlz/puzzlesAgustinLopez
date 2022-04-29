@@ -1,0 +1,44 @@
+ul {
+  padding-bottom: 0 !important;
+}
+
+ul li {
+  -ms-flex-pack: distribute !important;
+      justify-content: space-around !important;
+}
+
+.tituloCart {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.MuiPaper-root {
+  min-width: 300px !important;
+}
+
+.itemCart {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.itemCart img {
+  width: 90px;
+  height: 90px;
+}
+
+.btnConcluirCompra {
+  width: 100%;
+  text-align: center !important;
+  background-color: black !important;
+  color: white !important;
+  margin-top: 1rem !important;
+}
+
+p {
+  color: black;
+  margin: 0 5px;
+}
+/*# sourceMappingURL=CartWidget.css.map */

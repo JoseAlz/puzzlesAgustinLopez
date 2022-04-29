@@ -13,7 +13,7 @@ const Contacto = () => {
                 <label>Correo Electronico</label>
                 <input type="email" required placeholder="Ingresa tu correo electronico"/>
                 <label>Ingresa tu numero de contacto</label>
-                <input type="number" required placeholder="Ingresa tu numero de contacto"/>
+                <input type="number" control="none" required placeholder="Ingresa tu numero de contacto"/>
                 <Button className="btnContacto">Enviar</Button>    
             </form>
             </Grid>

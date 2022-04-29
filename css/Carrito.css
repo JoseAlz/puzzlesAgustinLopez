@@ -1,0 +1,133 @@
+.itemBox {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
+  border-bottom: 1px solid black;
+  background-color: white;
+}
+
+.itemBox img {
+  width: 250px;
+}
+
+.itemBox p {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 1.2rem;
+}
+
+.itemBox .btnDeleteItem {
+  color: black;
+}
+
+.finBox {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: space-evenly !important;
+      -ms-flex-pack: space-evenly !important;
+          justify-content: space-evenly !important;
+  margin: 2rem;
+}
+
+.finBox h4 {
+  color: white;
+}
+
+.finBox .btnFinCompra {
+  background-color: white;
+  color: black;
+}
+
+.finBox .btnFinCompra:hover {
+  background-color: black;
+  color: white;
+}
+
+.cartVacio {
+  text-align: center;
+}
+
+.cartVacio p {
+  color: white;
+  text-align: center;
+}
+
+.cartVacio .btnVolver {
+  background-color: white;
+  color: black !important;
+}
+
+.cartVacio .btnVolver:hover {
+  background-color: black;
+  color: white !important;
+}
+
+.formCompra {
+  text-align: center;
+  width: 50%;
+  margin: 5rem auto !important;
+  background-color: rgba(11, 27, 32, 0.582);
+  border: 1px solid aliceblue;
+  border-radius: 15px;
+}
+
+.formCompra h2 {
+  color: white;
+}
+
+.formCompra input {
+  margin: 1rem auto;
+}
+
+.formCompra button {
+  background-color: black !important;
+  color: white;
+  margin: 1rem;
+}
+
+.formCompra button:hover {
+  background-color: white !important;
+  color: black !important;
+}
+
+.formCompraRealizada {
+  text-align: center;
+  width: 50%;
+  margin: 5rem auto !important;
+  background-color: rgba(11, 27, 32, 0.582);
+  border: 1px solid aliceblue;
+  border-radius: 15px;
+}
+
+.formCompraRealizada h3, .formCompraRealizada p {
+  color: white;
+}
+
+.formCompraRealizada .orderId {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.formCompraRealizada button {
+  background-color: black !important;
+  color: white;
+  margin: 1rem;
+}
+
+.formCompraRealizada button:hover {
+  background-color: white !important;
+  color: black !important;
+}
+
+.loadingOrder {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 15rem;
+}
+/*# sourceMappingURL=Carrito.css.map */

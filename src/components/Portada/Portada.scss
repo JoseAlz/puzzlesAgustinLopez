@@ -1,0 +1,27 @@
+.portada {
+    display: grid !important;
+    grid-template-columns: repeat(2, auto);
+    gap: 5rem;
+    background-image: url("../../../public/portada.jpg") !important;
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+
+    h1 {
+        align-self: center;
+        text-shadow: 1px 1px 2px black;
+        color: white;
+        margin-left: 5rem;
+    }
+
+    p {
+        align-self: center;
+        color: white;
+        text-align: justify;
+        font-size: 1.1rem;
+        font-weight: bolder;
+        margin: 0 7rem;
+        line-height: 2rem;
+        text-shadow: 1px 1px 2px black;
+    }
+}

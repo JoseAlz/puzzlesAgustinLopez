@@ -10,7 +10,7 @@ import "../CartWidget/CartWidget.scss"
 import { Link } from "react-router-dom"
 
 function CartWidget() {
-  const { cartProducts, eliminarProductoCarro } = useContext(CartContext)
+  const { cartProducts, eliminarProductoCarro, reloadStore } = useContext(CartContext)
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -21,7 +21,7 @@ function CartWidget() {
   };
 
   let cantItems = cartProducts.length
-
+ 
   return (
     <>
       {
@@ -39,7 +39,7 @@ function CartWidget() {
               <p>{cantItems}</p>
             </Button>
             <Menu
-
+              className="menuCart"
               id="basic-menu"
               anchorEl={anchorEl}
               open={open}
@@ -50,18 +50,18 @@ function CartWidget() {
             > <p className="tituloCart">Lista de productos</p>
 
               {cartProducts.map((cartProduct) => {
-                return (<div key={cartProduct.id}>
-                  <MenuItem onClick={handleClose} className="itemCart">
+                return (
+                  <MenuItem onClick={handleClose} className="itemCart" key={cartProduct.id}>
 
                     <img src={`../${cartProduct.imagen}`} />
                     <p>{cartProduct.nombre}</p>
                     <p> $ {cartProduct.precio}</p>
                     <p>Cantidad: {cartProduct.cantidad}</p>
 
-                    <Button onClick={() => eliminarProductoCarro(cartProduct)}><DeleteIcon /></Button>
+                    <Button ><DeleteIcon className="btnDelete" onClick={() => eliminarProductoCarro(cartProduct)} /></Button>
                   </MenuItem>
 
-                </div>
+                  
                 )
               })}
 

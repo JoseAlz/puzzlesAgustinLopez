@@ -1,0 +1,25 @@
+.boxRecomendados {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+.boxInfo{
+    display: flex;
+    gap: 2rem;
+    justify-content: space-around;
+    div{
+        margin: 2rem;
+        text-align: center;
+        .MuiSvgIcon-root{
+            width: 1.5em;
+            height: 1.5em;
+            color:#071717
+        }
+        p{
+            font: 1.3em;
+            color:#071717
+        }
+    }
+    background-color: white;
+}

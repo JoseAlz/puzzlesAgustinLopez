@@ -4,35 +4,38 @@ import {createContext, useState} from "react";
 const CartContext= createContext();
 
 const CartProvider= ({children}) =>{
-    const [cartProducts, setCartProducts] = useState([]);
-    
-
+    const [cartProducts, setCartProducts] = useState(JSON.parse(localStorage.getItem("productos")) || []);
+    const reloadStore = (i) => { localStorage.setItem("productos", JSON.stringify(i))}
+     
     const agregarProductoCarro = (product, cantidad) => {
         let existente= cartProducts.find(cartProducts => cartProducts.id === product.id)
         
         if (!existente) {
             product.cantidad = product.cantidad + cantidad
             setCartProducts(cartProducts =>[...cartProducts, product])
-            
+            localStorage.setItem("productos", JSON.stringify([...cartProducts, product]))
         } else {
             product.cantidad = product.cantidad + cantidad
         }
         
     }
-    const eliminarProductoCarro = (product) => {
-        // for (let i=0; i < cartProducts.length; i++){
-        //     if (cartProducts[i].id == product.id){
-        //          cartProducts.splice(i,1)
 
-        //     } 
-            
-        // }
-        // return cartProducts
-        setCartProducts(cartProducts.filter((cartProducts) => {
+    const eliminarProductoCarro = (product) => {
+        
+        
+        setCartProducts(cartProducts.filter((cartProduct) => {
             product.cantidad= 0;
-            return cartProducts.id !== product.id
+            localStorage.removeItem("productos")
+            
+            return cartProduct.id !== product.id
+            
 
         } ))
+        
+        
+        
+        
+        
         
     }
     const calcTotal= () => {
@@ -56,7 +59,7 @@ const CartProvider= ({children}) =>{
         eliminarProductoCarro,
         calcTotal,
         setCartProducts,
-       
+        reloadStore,
         
     }
     

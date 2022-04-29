@@ -1,5 +1,5 @@
-import dataProducts from "../components/data/products"
-import { useParams } from "react-router-dom"
+
+
 import { useEffect, useState, useContext } from "react"
 import "./styles/DetailStyle.scss"
 import CartContext from "../context/CartContext"
@@ -8,13 +8,14 @@ import { Button, Container, Grid } from "@mui/material"
 import ItemCount from "../components/ItemCount/ItemCount"
 import db from "../firebase"
 import {doc, getDoc} from "firebase/firestore"
-
+import { useParams, useNavigate } from "react-router-dom"
 
 const DetailPage = () => {
     const { cartProducts, agregarProductoCarro } = useContext(CartContext)
     const { id } = useParams();
     const [product, setProduct] = useState([]);
-    
+    const navigate = useNavigate();
+
     const getProducts = async () => {
         const docRef = doc(db, "bebidas", id);
         const docSnap = await getDoc(docRef);
@@ -24,7 +25,7 @@ const DetailPage = () => {
             product.id = docSnap.id
             setProduct(product)
           } else {
-            console.log("No such document!");
+            navigate("/error-404")
             
           }
     }
@@ -63,8 +64,9 @@ const DetailPage = () => {
                         imagen={product.imagen}
                         name={product.nombre}
                         price={product.precio}
-                        detail={product.detalle}
+                        detail={product.descripcion}
                         stock={product.stock}
+                        size={product.tamaño}
 
                     />
 

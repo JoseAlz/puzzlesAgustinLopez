@@ -1,0 +1,56 @@
+.logoNav {
+    width: 220px;
+}
+
+nav {
+    display: flex;
+    flex: 1;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    // border-radius: 5px;
+    // border: 2px solid #133d3d;
+    background-color: white;
+
+
+}
+
+.btn {
+    margin: 2rem 1rem !important;
+    border-color: rgb(16, 16, 43) !important;
+    color: black !important;
+}
+
+.btn:hover {
+    background-color: #133d3d !important;
+    color: white !important;
+}
+
+.iconoCart {
+    color: black;
+    height: 35px !important;
+    width: 35px;
+
+
+}
+
+.iconosNav {
+    display: flex;
+    width: 200px;
+}
+
+#basic-menu {
+    min-width: auto !important;
+    width: 195px !important;
+    margin-top: 0.5rem;
+    .MuiPaper-root{
+        left: 543px !important;
+    }
+    
+}
+.subMenu{
+    &:hover{background-color: #133d3d !important;
+    color: white !important;
+    border: 1px solid black;
+    border-radius: 3px;
+  }
+}

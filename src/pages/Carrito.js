@@ -72,7 +72,7 @@ const CartPage = () => {
             buyer: formData
         })
         enviarOrder()
-
+        localStorage.removeItem("productos")
         setLoading(false)
 
     }
@@ -130,11 +130,11 @@ const CartPage = () => {
                         <div className="formCompra">
                             <h2>Formulario de compra</h2>
                             <form onSubmit={formSubmit}>
-                                <input type="text" name="name" placeholder="Nombre completo" onChange={infoComprador}
+                                <input type="text" name="name" required placeholder="Nombre completo" onChange={infoComprador}
                                     value={formData.name} />
-                                <input type="number" name="phone" placeholder="Telefono" onChange={infoComprador}
+                                <input type="number" name="phone" required placeholder="Telefono" onChange={infoComprador}
                                     value={formData.phone} />
-                                <input type="mail" name="email" placeholder="Correo electrónico" onChange={infoComprador} value={formData.email} />
+                                <input type="mail" name="email" required placeholder="Correo electrónico" onChange={infoComprador} value={formData.email} />
                                 <Button type="submit">Enviar</Button>
                             </form>
 

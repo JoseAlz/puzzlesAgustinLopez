@@ -9,9 +9,11 @@ ul {
     font-size: 1.2rem;
 
 }
-.MuiPaper-root{
-    min-width: 300px !important;
-    
+.menuCart {
+    .MuiPaper-root{
+        min-width: 500px !important;
+        
+    }
 }
 .itemCart {
     width: auto;
@@ -24,6 +26,9 @@ ul {
     img {
         width: 90px;
         height: 90px;
+    }
+    .btnDelete{
+        color: #071717
     }
 }
 .btnConcluirCompra{
