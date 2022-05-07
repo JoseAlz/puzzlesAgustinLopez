@@ -14,6 +14,8 @@ import ProductListPage from "./pages/ProductList"
 import NotPageFound from "./pages/NotPageFound"
 import Instrucciones from "./pages/InstruccionesCompra"
 
+
+
 ReactDOM.render(
   <React.StrictMode>
     <ItemProvider>

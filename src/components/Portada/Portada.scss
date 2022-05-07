@@ -1,17 +1,17 @@
 .portada {
-    display: grid !important;
-    grid-template-columns: repeat(2, auto);
-    gap: 5rem;
+    
     background-image: url("../../../public/portada.jpg") !important;
     background-position: center;
     background-size: cover;
-    height: 400px;
-
+    min-height: 400px;
+    min-width: 100% !important; 
+    margin-top: -2rem;
     h1 {
-        align-self: center;
+        text-align: center;
         text-shadow: 1px 1px 2px black;
         color: white;
-        margin-left: 5rem;
+        
+        padding-top: 4rem;
     }
 
     p {
@@ -20,8 +20,19 @@
         text-align: justify;
         font-size: 1.1rem;
         font-weight: bolder;
-        margin: 0 7rem;
+        
+        margin: 0 5rem;
         line-height: 2rem;
         text-shadow: 1px 1px 2px black;
+        
+        @media screen and (max-width:810px) {
+            font-size:1rem;
+            margin: 0.5rem 2rem;
+        }
+        @media screen and (max-width:450px) {
+            font-size:1rem;
+            margin: 0.5rem 2rem;
+            padding:1rem
+        }
     }
 }

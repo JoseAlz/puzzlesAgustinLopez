@@ -5,8 +5,6 @@ import "../productos/item.css"
 import { Link, useParams, useNavigate } from "react-router-dom"
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
-import db from "../../firebase"
-import { collection, getDocs } from "firebase/firestore";
 import ItemContext from "../../context/ItemContext";
 
 const ItemListContainer = () => {
@@ -15,64 +13,42 @@ const ItemListContainer = () => {
     const [loading, setLoading] = useState(true)
     const navigate = useNavigate()
 
-    // const {getProducts} = useContext(ItemContext)
-
-    const getProducts = async () => {
-
-        const itemCollection = collection(db, "bebidas")
-        const productsSnapshot = await getDocs(itemCollection)
-        const itemList = productsSnapshot.docs.map((item) => {
-            const product = item.data()
-            product.id = item.id
-
-            return product
+    const { getProducts } = useContext(ItemContext)
 
 
-        })
-        return itemList
-
-    }
 
     useEffect(() => {
         setLoading(true)
         setProducts([])
 
 
-        return getProducts().then((productos) => {
-
+        getProducts().then((productos) => {
             setLoading(false)
+
+
 
             filterProductByCategory(productos, category)
 
 
-
-
-
-
-
         })
+
 
     }, [category])
 
+
     const filterProductByCategory = (array, categoria) => {
-
-        
-        array.map((producto) => {
-            if (categoria == producto.categoria) {
-                
-                return setProducts(products => [...products, producto])
-            } 
-        })
+        const products = array.filter(product => product.categoria === categoria);
 
 
-    }
+        products.length > 0 ? setProducts(products) : navigate("error-404")
+
+    };
+
+
 
 
     return (
         <>
-
-
-
 
             <h1>{category.toUpperCase()}</h1>
             <div className="boxItem">
@@ -81,13 +57,11 @@ const ItemListContainer = () => {
                 {
                     !loading ? (
                         products.map((producto) => {
-                            const { id, nombre, precio, tamaño, imagen, stock, categoria } = producto;
-                            console.log(categoria)
-                            if (category) {
-                                return (
-
-                                    <Link to={`./${id}`}>
-                                        <div key={id} className="item" >
+                            const { id, nombre, precio, tamaño, imagen, stock } = producto;
+                            return (
+                                (
+                                    <Link to={`./${id}`} key={id}>
+                                        <div className="item" >
                                             <Item
                                                 nombre={nombre}
                                                 precio={precio}
@@ -99,12 +73,11 @@ const ItemListContainer = () => {
 
                                         </div>
                                     </Link>
+
                                 )
-                            }
 
+                            )
                         }
-
-
 
                         )
 
@@ -123,6 +96,7 @@ const ItemListContainer = () => {
     )
 
 }
+
 export default ItemListContainer
 
 

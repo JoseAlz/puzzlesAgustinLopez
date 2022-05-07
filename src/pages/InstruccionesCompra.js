@@ -14,7 +14,8 @@ const Instrucciones = () => {
                 </li>
                 <li>
                     Formas de Pago 
-                    <p>Podes abonar tu compra en efectivo, transferencia bancaria o con tarjetas de credito y/o debito </p>
+                    <p>Podes abonar tu compra en efectivo, transferencia bancaria o con tarjetas de credito y/o debito a traves de Mercadopago. <br/>
+                    Si elegis MercadoPago, veras en el detalle la orden generada que identifica tu compra. </p>
                 </li>
                 <li>
                     Cancelación de pedido

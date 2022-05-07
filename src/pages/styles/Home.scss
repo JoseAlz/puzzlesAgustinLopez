@@ -3,9 +3,13 @@
     flex-wrap: wrap;
     text-align: center;
     justify-content: center;
+    @media screen and (max-width:550px) {
+     margin-bottom: 8rem;   
+    }
 }
 .boxInfo{
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     justify-content: space-around;
     div{

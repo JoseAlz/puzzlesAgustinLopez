@@ -1,0 +1,110 @@
+.appBar {
+    background-color: white !important;
+
+    .logoNav {
+        max-width: 220px;
+        margin-right: auto;
+        background-color: white;
+    }
+
+    .btnBox {
+        margin-right: auto;
+
+        .btn {
+
+            color: black !important;
+            margin: 0 1rem !important;
+            font-family: "Rubik" !important;
+            font-size: 1rem
+        }
+
+
+
+
+    }
+
+}
+
+
+// .btnNav {
+//     margin-right: 5rem !important;
+// }
+
+// nav {
+//     display: flex;
+//     flex: 1;
+//     flex-flow: row wrap;
+//     justify-content: space-between;
+//     // border-radius: 5px;
+//     // border: 2px solid #133d3d;
+//     background-color: white;
+
+
+// }
+
+// .btn {
+//     margin: 2rem 1rem !important;
+//     border-color: rgb(16, 16, 43) !important;
+//     color: black !important;
+// }
+
+// .btn:hover {
+//     background-color: #133d3d !important;
+//     color: white !important;
+// }
+
+.iconoCart {
+    color: black;
+    height: 35px !important;
+    width: 35px;
+
+
+}
+
+#basic-menu {
+    min-width: auto !important;
+    width: 195px !important;
+    margin-top: 0.5rem;
+
+
+
+    ul {
+        li {
+            font-family: "Rubik" !important;
+
+        }
+    }
+
+    .subMenu {
+        &:hover {
+            background-color: #133d3d !important;
+            color: white !important;
+            border: 1px solid black;
+            border-radius: 3px;
+        }
+    }
+}
+
+
+/*Responsive*/
+
+.btnMenuResponsive {
+    margin-left: auto !important;
+    color: black !important
+}
+
+#basic-button2 {
+    font-family: "Rubik" !important;
+    color: black !important;
+    text-decoration: none;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 1rem;
+    line-height: 0;
+    letter-spacing: 0;
+}

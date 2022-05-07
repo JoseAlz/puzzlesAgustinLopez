@@ -1,0 +1,64 @@
+h1{
+    text-align: center;
+    color:white;
+}
+form {
+    text-align: center;
+    color: white;
+    
+}
+label, input {
+    margin: 1rem;
+    display: block
+}
+input {
+    text-align: center;
+    width: 40%;
+    height: 30px;
+    margin: auto auto;
+}
+.btnContacto{
+    background-color: white !important;
+    text-align: center;
+    margin-top: 1rem !important;
+    align-items: center;
+    color: black !important
+}
+.btnContacto:hover{
+    background-color: black !important;
+    color:white !important;
+}   
+
+.envioForm{
+    text-align: center;
+    width: 50%;
+    margin: 5rem auto !important;
+    background-color: rgba(11, 27, 32, 0.582);
+    border: 1px solid aliceblue;
+    border-radius: 15px;
+    h4{
+        color:white
+    }
+
+    .btnVolver {
+        background-color: white;
+        color: black;
+        margin:1rem;
+    
+        &:hover {
+            background-color: black;
+            color: white;
+        }
+    }
+    
+}
+textarea{
+    text-align: center;
+    width: 40%;
+    height: 50px;
+    margin: 1rem auto;
+    display: block;
+    font-family: sans-serif;
+    
+
+    }

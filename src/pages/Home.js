@@ -9,11 +9,13 @@ import EmblaCarousel from "../components/Carousel/EmblaCarousel"
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import LockIcon from '@mui/icons-material/Lock';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
 const HomePage = () => {
     const { getProducts } = useContext(ItemContext)
     const [products, setProducts] = useState([])
+    const [loading, setLoading] = useState(true)
 
     const filterProductRecommendaded = (array, recomendado) => {
         array.map((producto) => {
@@ -25,11 +27,11 @@ const HomePage = () => {
 
     }
     useEffect(() => {
-
+        setLoading(true)
 
 
         return getProducts().then((productos) => {
-
+            setLoading(false)
 
             filterProductRecommendaded(productos)
 
@@ -39,7 +41,7 @@ const HomePage = () => {
 
     }, [])
 
-    const SLIDE_COUNT = 5;
+    const SLIDE_COUNT = 3;
     const slides = Array.from(Array(SLIDE_COUNT).keys());
 
 
@@ -47,10 +49,10 @@ const HomePage = () => {
 
 
         <>
-           <EmblaCarousel slides={slides} />
-           <div className="boxInfo">
+            <EmblaCarousel slides={slides} />
+            <div className="boxInfo">
                 <div>
-                    <LocalShippingIcon /> 
+                    <LocalShippingIcon />
                     <p>ENVIOS A DOMICILIO</p>
                 </div>
                 <div>
@@ -58,37 +60,46 @@ const HomePage = () => {
                     <p>DATOS 100% PROTEGIDOS</p>
                 </div>
                 <div>
-                    <WhatsAppIcon />
-                    <p>3512405823</p>
+                    <a href="https://wa.me/5493512405823" target="_blank">
+                        <WhatsAppIcon />
+                        <p>3512405823</p>
+                    </a>
                 </div>
-           </div>
+            </div>
             <Portada />
             <Grid>
                 <h1>Productos más vendidos</h1>
                 <div className="boxRecomendados">
                     {
-                        products.map((product) => {
-                            const { id, nombre, precio, tamaño, imagen, stock, categoria } = product;
+                        !loading ? (
+                            products.map((product) => {
+                                const { id, nombre, precio, tamaño, imagen, stock, categoria } = product;
 
 
-                            return (
+                                return (
 
-                                <Link to={`/${categoria}/${id}`}>
-                                    <div key={id} className="item" >
-                                        <Item
-                                            nombre={nombre}
-                                            precio={precio}
-                                            tamaño={tamaño}
-                                            img={imagen}
-                                            stockItem={stock}
+                                    <Link to={`/${categoria}/${id}`} key={id}>
+                                        <div  className="item" >
+                                            <Item
+                                                
+                                                nombre={nombre}
+                                                precio={precio}
+                                                tamaño={tamaño}
+                                                img={imagen}
+                                                stockItem={stock}
 
-                                        />
+                                            />
 
-                                    </div>
-                                </Link>
-                            )
-                        }
+                                        </div>
+                                    </Link>
+                                )
+                            }
+                            )) : (
+                            <Box sx={{ display: 'flex' }}>
+                                <CircularProgress />
+                            </Box>
                         )
+
                     }
                 </div>
             </Grid>

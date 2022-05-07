@@ -12,7 +12,14 @@ ul {
 .menuCart {
     .MuiPaper-root{
         min-width: 500px !important;
-        
+        @media screen and(max-width:540px) {
+            min-width: 340px !important ;
+        }
+    }
+    p{
+        @media screen and(max-width:540px) {
+            font-size: 0.8rem;
+        }
     }
 }
 .itemCart {
@@ -26,7 +33,9 @@ ul {
     img {
         width: 90px;
         height: 90px;
+        
     }
+    
     .btnDelete{
         color: #071717
     }
@@ -41,4 +50,5 @@ ul {
 p{
     color: black;
     margin: 0 5px;
+    
 }

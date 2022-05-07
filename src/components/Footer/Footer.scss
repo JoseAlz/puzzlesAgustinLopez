@@ -9,21 +9,36 @@ footer {
     position:absolute;
     bottom: 0;
     width: 100%;
+    
     .boxFooter {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-around;
         margin-bottom: 2rem;
         .logoFooter{
+            text-align: center;
             img {
                 width: 220px;
+                
             }
-            p{
+            a{
                 text-align: center;
+                font-size: 1.1rem;
+                &:hover{
+                    color:#184e4e
+                }
             }
         }
         .navFooter{
             ul {
                 list-style-type: none;
+                li{
+                    margin: 0.5rem;
+                    font-size: 1.1rem;
+                    &:hover{
+                        color:#184e4e
+                    }
+                }
             }
         }
         .iconos{

@@ -1,6 +1,6 @@
-import media1 from "./slider-cerveza.jpg";
-import media2 from "./slider-fernet.png";
-import media3 from "./slider-gin.jpg";
+import media1 from "./slider-gin.jpg";
+import media2 from "./slider-cerveza.jpg";
+import media3 from "./slider-fernet.png";
 
 
 export const media = [media1, media2, media3];

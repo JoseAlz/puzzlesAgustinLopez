@@ -3,9 +3,15 @@
     justify-content: space-between !important;
     border-bottom: 1px solid black;
     background-color: white;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 20px;
 
     img {
         width: 250px;
+        height: 270px;
+        
     }
 
     p {
@@ -17,7 +23,18 @@
     .btnDeleteItem {
         color: black;
     }
+    @media screen and (max-width:550px) {
 
+        img{
+            margin: 0 auto
+        }
+        p{
+            margin: 1rem;
+            font-size: 1rem;
+        }
+        
+        
+    }
 }
 
 .finBox {
@@ -38,6 +55,10 @@
             color: white;
         }
     }
+    @media screen and(max-width:430px) {
+        padding-bottom: 8rem !important;
+        
+    }
 }
 
 .cartVacio {
@@ -49,6 +70,7 @@
     }
 
     .btnVolver {
+        margin-top: 2rem;
         background-color: white;
         color: black !important;
 
@@ -85,10 +107,14 @@
             color: black !important
         }
     }
+    @media screen and(max-width:430px) {
+        width: 80%;;
+        
+    }
 
-    
 
 }
+
 .formCompraRealizada {
     text-align: center;
     width: 50%;
@@ -97,27 +123,49 @@
     border: 1px solid aliceblue;
     border-radius: 15px;
 
-    h3,p {
-        color:white;
+    h3,
+    p {
+        color: white;
     }
-    .orderId{
+
+    .orderId {
         font-weight: bolder;
         text-decoration: underline;
     }
+
     button {
         background-color: black !important;
         color: white;
         margin: 1rem;
-
+        font-family: "Rubik";
         &:hover {
             background-color: white !important;
             color: black !important
         }
     }
+    .btnPagar{
+        // width: 64px;
+        height: 40px;
+        border-radius: 4px;
+        // font-size: 0.875rem;
+        width: 10%;
+        background-color: rgb(9, 66, 7);
+        color: white;
+        font-family: "Rubik";
+        margin-bottom: 0.5rem;
+        cursor: pointer ;
+        &:hover{
+            background-color: white;
+            color:rgb(9, 66, 7);
+            border-color: rgb(9, 66, 7);
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        }
+    }
 }
-.loadingOrder{
-    
-   justify-content: center;
-   margin-top: 15rem;
+
+.loadingOrder {
+
+    justify-content: center;
+    margin-top: 15rem;
 
 }

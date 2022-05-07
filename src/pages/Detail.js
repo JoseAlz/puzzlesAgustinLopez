@@ -58,8 +58,8 @@ const DetailPage = () => {
 
     return (
         <div className="boxItem">
-            <Container>
-                <Grid container className="detailItem">
+            <Container className="containerItemDetail">
+                <Grid container className="detailItem" key={product.id}>
                     <ItemDetail
                         imagen={product.imagen}
                         name={product.nombre}
