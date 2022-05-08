@@ -25,7 +25,7 @@ function CartWidget() {
   return (
     <>
       {
-        cantItems ? (
+        
           <>
             <Button
               id="basic-button"
@@ -69,11 +69,7 @@ function CartWidget() {
 
             </Menu>
           </>
-        ):(
-          <div>
-
-          </div>
-        )
+        
       }
 
     </>

@@ -1,7 +1,7 @@
 
 import { useEffect, useState, useContext } from "react";
 import Item from "./Item"
-import "../productos/item.css"
+import "../productos/item.scss"
 import { Link, useParams, useNavigate } from "react-router-dom"
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';

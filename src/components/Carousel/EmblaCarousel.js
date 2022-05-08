@@ -51,7 +51,7 @@ const EmblaCarousel = ({ slides, options = { loop: false } }) => {
                 <img
                   className="embla__slide__img"
                   src={mediaByIndex(index)}
-                  alt="A cool cat."
+                  alt="slides"
                 />
               </div>
             </div>

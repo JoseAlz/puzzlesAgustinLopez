@@ -1,4 +1,4 @@
-import   "../productos/item.css"
+import   "../productos/item.scss"
 import {Button} from "@mui/material"
 
 

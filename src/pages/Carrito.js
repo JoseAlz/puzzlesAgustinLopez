@@ -46,7 +46,7 @@ const CartPage = () => {
 
     const enviarOrder = async () => {
         const docRef = await addDoc(collection(db, "ordenes"), { ...order, buyer: formData });
-        console.log("orden pusheada", docRef.id)
+        
         setOrderGenerada(docRef.id)
 
     }
@@ -84,10 +84,7 @@ const CartPage = () => {
         setCartProducts([])
 
     }
-    const pagarCarrito = () => {
-        navigate("/payment");
-
-    }
+   
     return (
         <>
             <h1>Carrito</h1>
