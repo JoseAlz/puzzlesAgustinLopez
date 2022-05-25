@@ -156,7 +156,7 @@ const CartPage = () => {
                                 <p>Su numero de identificación es: <span className="orderId">{orderGenerada}</span></p>
                                 <p>Para abonar su pedido con tarjeta de credito o debito haga click en pagar.</p>
                                 <Button onClick={cerrarCarrito}>Cerrar</Button>
-                                <form action="http://localhost:3001/checkout" method="POST">
+                                <form action="https://us-central1-puzzles-65bfd.cloudfunctions.net/app/checkout" method="POST">
                                     <input type="hidden" name="title" value={orderGenerada} />
                                     <input type="hidden" name="price" value={totalCarro} />
                                     <input type="submit" className="btnPagar" value="Pagar" />
