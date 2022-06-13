@@ -13,7 +13,8 @@ import Footer from "./components/Footer/Footer"
 import ProductListPage from "./pages/ProductList"
 import NotPageFound from "./pages/NotPageFound"
 import Instrucciones from "./pages/InstruccionesCompra"
-
+import LoginAdmin from "./pages/admin/LoginAdmin"
+import HomeAdmin from "./pages/admin/HomeAdmin"
 
 
 ReactDOM.render(
@@ -30,6 +31,8 @@ ReactDOM.render(
             <Route path='/contacto' element={<ContactoPage />} />
             <Route path='/cart' element={<CartPage />} />
             <Route path="/faq" element={<Instrucciones />} />
+            <Route path="/admin" element={<LoginAdmin/>} />
+            <Route path="/panel-admin" element={<HomeAdmin/>}/>
 
           </Routes>
           <Footer />

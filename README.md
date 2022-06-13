@@ -13,9 +13,13 @@ Version desktop y mobile.
 - Embla Carousel 
 
 
+## Backend con Firebase
+- Utilización de Firebase Functions para enviar a la pasarela de pago de mercadopago.
+- Utilización de Firebase Authentication para el usuario administrador.
+- El usuario administrador, en su panel de control puede agregar productos, editarlos y hasta eliminarlos.
+- Utilización de Firebase Storage para guardar las imagenes de los productos. 
+
 ## Pasarela Mercado Pago
-Iniciar servidor con:
-```$ npm run watch```
 
 - Se realiza una compra con test user de MercadoPago. 
 Iniciar sesion en Mercadopago con el siguiente usuario:

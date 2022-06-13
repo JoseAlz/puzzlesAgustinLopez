@@ -14,7 +14,7 @@ const ItemDetail = (product) => {
                 <>
 
                     <div className="imgDetail">
-                        <img src={`../${imagen}`} alt="imagenDetail" />
+                        <img src={`${imagen}`} alt="imagenDetail" />
                     </div>
                 
                 
