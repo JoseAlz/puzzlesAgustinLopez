@@ -10,7 +10,7 @@ import "../CartWidget/CartWidget.scss"
 import { Link } from "react-router-dom"
 
 function CartWidget() {
-  const { cartProducts, eliminarProductoCarro, reloadStore } = useContext(CartContext)
+  const { cartProducts, eliminarProductoCarro } = useContext(CartContext)
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -53,7 +53,7 @@ function CartWidget() {
                 return (
                   <MenuItem onClick={handleClose} className="itemCart" key={cartProduct.id}>
 
-                    <img src={`${cartProduct.imagen}`} />
+                    <img src={`${cartProduct.imagen}`} alt='img'/>
                     <p>{cartProduct.nombre}</p>
                     <p> $ {cartProduct.precio}</p>
                     <p>Cantidad: {cartProduct.cantidad}</p>

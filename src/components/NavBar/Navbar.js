@@ -87,9 +87,9 @@ function NavBar() {
                                 <CartWidget />
 
                             </div>
-                            <IconButton sx={{ display: { xs: "inline-flex", sm: 'inline-flex', md: "none" } }} className="btnMenuResponsive">
+                            <IconButton sx={{ display: { xs: "inline-flex", sm: 'inline-flex', md: "none" } }} className="btnMenuResponsive" onClick={()=> setOpenMenu(true)}>
 
-                                <MenuIcon onClick={()=> setOpenMenu(true)}/>
+                                <MenuIcon />
                             </IconButton>
                             
 
@@ -97,8 +97,8 @@ function NavBar() {
                     </Container>
                     <SwipeableDrawer anchor="right" open={openMenu} onOpen={()=> setOpenMenu(true)} onClose={()=> setOpenMenu(false)} >
                         <div>
-                        <IconButton>
-                            <ChevronRightIcon onClick={()=> setOpenMenu(false)}/>
+                        <IconButton onClick={()=> setOpenMenu(false)}>
+                            <ChevronRightIcon />
                         </IconButton>
                         </div>
                         <Divider />

@@ -1,10 +1,10 @@
 import db from "../../firebase"
 import ItemContext from "../../context/ItemContext"
 import { useContext, useEffect, useState } from "react"
-import { Grid, Button } from "@mui/material"
-import { setDoc, doc, getDoc, collection, addDoc, updateDoc, deleteDoc } from "firebase/firestore"
+import {  Button } from "@mui/material"
+import {  doc,  collection, addDoc, updateDoc, deleteDoc } from "firebase/firestore"
 import { storage } from "../../firebase"
-import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage"
+import {  ref, uploadBytes, getDownloadURL } from "firebase/storage"
 import { auth } from "../../firebase"
 import { onAuthStateChanged, signOut } from "firebase/auth";
 
@@ -37,7 +37,7 @@ const HomeAdmin = () => {
 
     const agregarProducto = async (e) => {
         e.preventDefault();
-        const { nombre, precio, categoria, descripcion, imagen, stock, cantidad, tamaño, recomendado } = nuevoProducto
+        const { nombre, precio, categoria, descripcion, stock, cantidad, tamaño, recomendado } = nuevoProducto
         const docRef = await addDoc(collection(db, "bebidas"), {
             nombre: nombre,
             precio: parseInt(precio),
