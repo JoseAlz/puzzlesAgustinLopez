@@ -5,7 +5,7 @@ import { getAuth } from "firebase/auth";
 import {getStorage} from "firebase/storage" 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBAITPh91HZZSQqsF_F-jl1Zbaw4rPe_3M",
+  apiKey: process.env.REACT_APP_FB_KEY || "AIzaSyBAITPh91HZZSQqsF_F-jl1Zbaw4rPe_3M",
   authDomain: "puzzles-65bfd.firebaseapp.com",
   projectId: "puzzles-65bfd",
   storageBucket: "puzzles-65bfd.appspot.com",
